@@ -5,3 +5,4 @@ mvn://repo.bodar.com/com.googlecode.funclate:funclate:jar|sources:130
 mvn:cglib:cglib-nodep:jar|sources:2.2
 mvn:org.objenesis:objenesis:jar|sources:1.2
 mvn:org.antlr:stringtemplate:jar|sources:3.2.1
+mvn:antlr:antlr:jar:2.7.7
