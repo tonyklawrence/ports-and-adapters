@@ -5,12 +5,14 @@ import static com.googlecode.utterlyidle.ApplicationBuilder.application;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        application().addAnnotated(MainResource.class).start();
+        application()
+                .addAnnotated(MainResource.class)
+                .start(4050);
     }
 
     public static class MainResource {
         @GET
-        @Path("/")
+        @Path("/welcome")
         public String welcome() {
             return "Welcome";
         }
