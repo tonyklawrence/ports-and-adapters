@@ -24,7 +24,7 @@ public class Main {
 
     public static class MainResource {
         @GET
-        @Path("/")
+        @Path("/welcome")
         public String welcome() {
             return "Welcome";
         }

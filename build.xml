@@ -12,6 +12,7 @@
   </path>
 
   <target name="clean" description="Removes all generated files">
+    <delete file="build/app.jar"/>
     <delete dir="build/classes"/>
     <delete dir="lib"/>
   </target>
@@ -21,6 +22,7 @@
     <mkdir dir="build/classes/test"/>
     <javac srcdir="src/main/java" destdir="build/classes/main" classpathref="lib.runtime" includeantruntime="false"/>
     <javac srcdir="src/test/java" destdir="build/classes/test" classpathref="lib.test" includeantruntime="false"/>
+    <copy todir="build/classes/main"><fileset dir="src/main/webapp"/></copy>
   </target>
 
   <target name="test" description="Run all tests" depends="compile">
