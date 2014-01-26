@@ -44,6 +44,15 @@
       </classpath>
     </java>
   </target>
+
+  <target name="dist" description="Create a runnable jar that can be distributed" depends="compile">
+    <jar destfile="build/app.jar" basedir="build/classes/main">
+      <zipgroupfileset dir="lib/runtime"/>
+      <manifest>
+        <attribute name="Main-Class" value="Main"/>
+      </manifest>
+    </jar>
+  </target>
   
   <target name="update-dependencies" description="Updates all dependent libraries">
     <update dependencies="build" directory="lib"/>
